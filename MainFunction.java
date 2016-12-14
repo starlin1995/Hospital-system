@@ -20,7 +20,24 @@ public class MainFunction implements ActionListener {
 		frmX.add(price);
 		frmX.add(chufang);
 		frmX.add(emp);
+                
+	        patientInfo.addActionListener(this);
+		price.addActionListener(this);
+		chufang.addActionListener(this);
+		emp.addActionListener(this);
 
+		frmX.setLayout(null);
+		frmX.setBackground(Color.ORANGE);
+		frmX.setBounds(500, 200, 350, 270);
+		frmX.setVisible(true);
+
+		// 窗口关闭按扭的事件
+		frmX.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent e) {
+				System.exit(0);
+			}
+		});
+		frmX.setResizable(false);// 固定窗口大小
 
 	}
 }
